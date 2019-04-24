@@ -1,0 +1,9 @@
+1.使用一手文件（一般英文版），一手软件（官网下）
+  要求：基本英语
+2.使用命令行
+  解放双手，效率高
+3.学会在线代码托管和版本管理
+  https://github.com
+  github如何使用 （参考：
+     https://baijiahao.baidu.com/s?id=1608871531156986161&wfr=spider&for=pc）
+4.
