@@ -1,0 +1,55 @@
+* 表示小技巧
+
+1.ArrayList
+  函数：1.  .size()    存进的数据的数量
+        2.  .get()     根据数据的标号提取数据
+        3.  .add(String s,int index)  将s加到index号上,其它字符串的标记后移
+                                      一位
+            .add(String s)            将s加到字符串的尾部
+        4.  .remove(int index)        删除
+        5.  .toArray()                将容器中的数据依次导入数组中
+  所以了解Java的类库很重要，对编写的效率和正确性都有帮助
+2.对象数组
+  这节课正好教到我之前一直出现的String的越界问题
+  主题：String[] 里面的什么
+  方法：1.System.out.println(a[0]);
+          结果：null
+        2.System.out.println(a[0]+"a");
+          结果：nulla
+        3.System.out.println(a[0].length());
+          结果：越界（我当时一直越界，懒得debug，而且debug的难度应该很大
+  原理：很简单，和数组的思想一样，一些管理者管理这String的存储。
+        但是，new一个String[]时，管理者没有指向任何东西，
+        于是，出现“越界”的问题
+        解决方法，给String[] 赋初值
+        另类的赋值：
+         String[] a = new String[10];
+         for( int i=0; i<a.length(); i++)
+         {
+               a[i] = ""+i;
+          } 
+        because,字符串无法用“=”来赋值，只能采用字符串的连接。
+  总结：对象数组（例如String[]）与基础数组（例如int[]）之间的不同
+        对象数组，new之后并没有对象，还要象String[]一样通过赋初值来创造对象。
+        因为它new的是对象管理者，而非对象本身。 
+3.for-each 与对象数组
+  //初始化是对对象初始化，上面可以写成a[i] = new String()+i;(推测)
+  在for-each里面赋值时是会改变值的，类似于指针。
+4.容器类
+  1.ArrayList<String> a = new ArrayList<String>();
+    范式容器
+    顺序存储
+  2.HashSet<String> s = new HashSet<String>();
+    集合容器
+    顺序存储，后面存进的与前面相同，删除前面的数据
+  输出：1.System.out.println(a);
+        2.a.get(i);
+    
+
+
+
+
+
+
+
+

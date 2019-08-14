@@ -1,0 +1,40 @@
+1.数据更新
+  插入数据
+      两种插入
+      insert
+      into <表名>[(<属性列1>[,<属性列2>]...)]
+      values (<常量1>[,<常量2>...]);
+
+      insert
+      into Student(Sno,Sname,Sex,Sdept,Sage)
+      values ('201215128','陈冬','男','IS','18');
+
+      把values换成子查询
+      create table Dept_age
+      (
+         Sdept char(15)
+         Avg_age smallint
+      );
+      插入数据
+      insert into Dept_age(Sdept,Avg_age)
+            select Sdept,AVG(Sage)
+            from Student
+            group by Sdept
+  修改数据
+      三种修改：修改某一个元组的值，修改多个元组的值，带子查询的修改语句
+      update <表名>
+      set <列名>=<表达式>[,<列名>=<表达式>]...
+      [where <条件>];
+     
+  删除数据
+      删除某一个元组的值，删除多个元组的值，带子查询的删除语句
+      delete from <表名>
+      [where <条件>]; 
+2.数据定义  create,alter,drop
+  数据查询  select from where order by group by having
+  数据更新  insert,update,delect
+3.空值的处理
+  空值：不知道，不存在，无意义
+  1.判断中  is null或 is not null
+  2.定义时的约束   not null 或 unique 或 主码
+  3.算数时为null  比较时不知道

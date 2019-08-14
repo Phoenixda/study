@@ -1,0 +1,17 @@
+* 为小技巧
+
+1.对于JTable的编写
+  Table是窗口，表现的地方
+  TableModle是Table的接口
+  TableData 是存放数据的地方，继承TableModle接口（这样与Table有关）
+  实现了后台数据与前台表现的连接
+2.MVC（Model（模型，数据接口）  View（表现）  Control（控制））
+  View的工作：被告知数据被修改时，从Model得到数据，将View重画一遍
+  Model  数据可以被修改，通知View数据被修改（notity）
+  Control 感知用户在界面做了什么事情，调用Model接口
+  这就是MVC设计模式
+3.MVC设计模式
+  Control不与View有联系
+  原理：Control改变Model（里面的数据）来出发View的改变
+  低耦合
+  View和Control可以合并起来

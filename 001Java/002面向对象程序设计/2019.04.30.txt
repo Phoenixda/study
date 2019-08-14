@@ -1,0 +1,19 @@
+* 表示小技巧
+
+1.数组是有限的，于是引入无限的东西，叫
+  容器
+2.ArrayList<String>
+  其中ArrayList是类，可以看作ArrayList of String，存放String的ArrayList。
+  叫做：范型  范型是一种容器
+3.容器
+  容器有两个类型
+  1.容器的类型
+  2.元素的类型
+4.ArrayList
+  函数：1.  .size()    存进的数据的数量
+        2.  .get()     根据数据的标号提取数据
+        3.  .add(String s,int index)  将s加到index号上,其它字符串的标记后移
+                                      一位
+            .add(String s)            将s加到字符串的尾部
+        4.  .remove(int index)        删除
+5.  

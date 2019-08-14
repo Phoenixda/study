@@ -1,0 +1,34 @@
+* 为小技巧
+
+1.处理输入输出的方式——流（stream）
+  一维的  一个数字就可以表示
+  单方向的  读就是读，写就是写
+  "hello world"是流，out是一种输出的流
+
+2.所以Java的类
+http://docs.oracle.com/javase/8/docs/api/overviewsummary.html
+
+3.System.in
+  System.out
+  标准输入，输出的流，可以当方法直接用   对象.System.in(a); a是数组，存入的是
+  字节
+
+4.流过滤器
+  DataOutputStream out = new DataOutputStream(new BufferedOutStream(new 
+  FileOutputStream()))
+  一环套一环
+
+5.1.处理字节
+    FileOutputStream()
+  2.处理基本数据（如int）
+    DataOutputStream out = new DataOutputStream(new BufferedOutStream(new 
+    FileOutputStream()))
+  3.处理文本
+    Read和write  （Unicode）
+    PrintWrite pw = new PrintWrite( new BufferWriter( new OutputStreamWriter(
+    new FileOutputStream("abc.txt")));
+    BufferedReader in = new BufferedReader(new InputStreamReader(new))
+  4.处理数字
+    如果是utf-8，可以在InputStreamReader中加格式
+  5.处理对象
+    ObjectInputStream

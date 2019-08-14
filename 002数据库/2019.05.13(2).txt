@@ -1,0 +1,59 @@
+1.SQL
+  数据定义
+      对象
+          scheme  table   index   view
+      操作
+          create  alter   drop
+      
+
+      删除时（不包括删除index）
+          cascade
+          restrict
+      建立index时
+          unique
+          cluster
+  数据查询
+      select
+      from
+      where 条件
+      order by 排序
+      单表查询
+      连接查询
+      嵌套查询
+      集合查询
+2.数据查询
+  1.select Sname,'Year of Birth:',2016-Sage,LOWER(Sdept)
+    from Student
+    Sname:普通的属性，常量，计算，函数
+  2.将例1的属性名改为别名
+    属性名+空格+别名
+    select Sname NAME,'Year of Birth:' BIRTH,2016-Sage BIRTHDAY,
+           LOWER(Sdept) DEPARTMENT
+    from Student
+3.消除取值的重复行
+  distinct
+  不消除
+  all或不写
+4.where 查询条件
+  1.范围
+    between and
+    not butween and
+  2.在什么中
+    in (, ,)
+    not in (, ,)
+  3.字符匹配
+    like ' ' escape '换码字符'
+    not like ' '  escape '换码字符'
+    其中 %任意长度  _任意单个字符 ，一个汉字站两个字符
+  4.对空值的查询
+    is null
+    is not null
+  5.多重条件（使前面的条件可以重复多次使用）
+    and or   and的优先级高于or
+5.order by
+  按一个或多个属性列排序
+  升序asc 降序desc  缺省值为升序
+6.聚集函数
+  count(*) 统计元组个数
+  count([distict|all] <列名>)  统计一列中值的个数
+  等等，文件夹中有

@@ -1,0 +1,4 @@
+1.Scanner in = new Scanner(System.in);
+  扫描文
+2.int t = (int) (math.random()*100+1)
+  math.random()  为[0,1),浮点型

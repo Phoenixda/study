@@ -1,0 +1,14 @@
+* 是小技巧
+
+1.for-each循环
+  for(int k : data)
+  {    	
+    if(k == x)
+    {
+	found = true;
+        break;
+    }
+  }	
+  data是数组的管理者，类似于指针
+  data从data[0]开始每一个数组的元素的值赋给k;
+  用途：数组的遍历，但不知道位置

@@ -1,0 +1,77 @@
+1.查询（单表查询）
+  select
+  from
+  where  对记录（元组操作）
+      in  
+      between and
+      is null
+      or
+      and
+      比较关系
+  order by      （对结果操作）
+  聚集函数（放在select后的）
+  group by        （对组操作）
+     having 分组条件
+2.where 条件 和having 条件的区别
+  where的条件针对记录，having的条件针对组
+  所以where子句中是不能用聚集函数作为条件表达式的
+3.数据定义
+  对象：scheme,table,view,index
+  操作：create,alter,drop
+  数据查询
+  对象：单表查询、连接查询、嵌套查询、集合查询
+  操作：select,from,where(in,<,between and,is null,and,or),order by
+        ,group by having
+4.连接查询（连接条件放在where中）
+  1.等值查询
+    =     是有冗余的连接（连接的属性是两个属性，非自然连接）
+  2.自身连接
+    查询每一门课的直接先修课的的名称（取别名）
+    select FIRST.Cname,SECOND.Cname
+    from Course FIRST,Course SECOND
+    where FIRST.Cpno = SECOND.Cno
+  3.外连接
+    select Student.Sno,Sname,Ssex,Sage,Sdapt,Cno,Grade
+    from Student left out join SC on
+         (Student.Sno=SC.Sno)
+    在某些系统中这样表达
+    select Student.Sno,Sname,Ssex,Sage,Sdapt,Cno,Grade
+    from Student,SC
+    where Student.Sno(+)=SC.Sno
+  4.多表连接
+5.别名
+  别名可以在select后，也可以在from后
+  select时是显示和使用的别名
+  from时是用于区分
+  where 用的 "."
+6.嵌套查询
+  外层查询，内层查询
+  order by 不能出现在内层，它是对结果的排序
+  相关子查询 
+       select Sno,Cno
+       from SC x
+       where Grade>=(
+                       select avg(Grade)
+                       from SC y
+                       where y.Scn=x.Scn
+                    )
+  不相关子查询
+      不相关子查询可以 变成  连接查询（嵌套查询变连接查询）
+7.嵌套查询（父查询与子查询连接）
+  in
+  比较预算符
+  any(some),all
+     any(some),all与关系代词一起使用（>）
+     例：>any  >all  <=all
+  exisets
+8.非
+  <>
+9.集合查询
+  select 和 select，类数和数据类型必须相同
+  并操作 union      union all    
+         可以用or
+  交操作 intersect
+         可以用and嵌套来实现
+  差操作 except
+         可以用and实现
+  

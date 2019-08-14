@@ -1,0 +1,18 @@
+* 是小技巧
+
+1.包裹类型，可以干很多基础类型不能干的事情
+  及函数
+2.in.next() 读入一个词
+  in.nextLine() 读入一行
+3.字符串类型，是类
+  字符串的常量标识，是对象
+  字符串.操作：s1.equel(s2);比较是否相等
+               s1.compareTo(s2); 比较大小
+               s1.length();     字符串长度
+               s1.charAt(index); 访问第index-1个字符
+  字符串不能做for-each循环。
+               s1.subString(n);s1.subString(n,m);输出字符串的一部分
+               s2.indexOf(c，n); 
+               s2.lastindexOf(c);              
+               s2.lastindexOf(c); 查找字符或字符串,不存在为-1
+4.本地变量没有默认初始化           

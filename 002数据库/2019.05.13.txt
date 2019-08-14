@@ -1,0 +1,39 @@
+1.SQL的基本表
+  本身独立存在的表
+  SQL中的一个关系就对应一个基本表
+  一个（或多个）基本表对应一个存储文件
+  一个表可以带若干索引
+2.数据定义
+  操作对象：
+  模式、表、视图、索引
+  操作方式：
+  创建、删除、修改
+3.层次化
+  数据库—>模式—>表（视图、索引）
+  模式：就是一个目录
+        create schema "S-T" authorization wang
+        （模式名，授权给某个用户）
+4.cascade  级联
+           有关的全部删除
+  restrict 限制
+           有相关的则不能删除
+5.create alter drop
+6.模式下的表
+  1.在创建模式时，创建表
+  2.设置搜索路径：set search_path to "S-T",public
+7.alter 修改表
+  1.将列的类型改变（如char改为int）
+    alter table student alter column Sage INT; 
+  2.增加属性的完整性约束
+    alter table student add unique(Cname);
+8.索引
+  目的：加快查询速度
+  可以建立索引，但是索引的维护和使用索引是由数据库主动完成的
+  unique  唯一的索引
+  cluster 簇组索引
+  索引可以有升序、降序
+9.定义一个主键
+  系统自动为它建立一个唯一索引
+10.修改索引
+   alter index SCno rename to SCSno
+11.scheme,table,index,view

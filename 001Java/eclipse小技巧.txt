@@ -1,0 +1,34 @@
+*1.快捷建 alt+/ sys——>system
+  简写
+*2.连续两次打开run
+   看起来没变化，实则有变化
+   真的打开两个显示结果的console
+   在”显示框“处右侧小电脑图标处可以进行切换
+
+   
+   如过启动太多程序会占用大量资源
+   在这里可以关掉，使eclipse更快
+   使它变成terminated
+*3.shift+方向键  表示选中
+    ctrl+/        行头被标上//  再次ctrl+/ 还原
+*4.eclipse 右上角切换“Java”平台和“debug”平台
+*5.选中+tab 整体向右一个tab
+*6.用oa存储原来的a
+   只是一种记忆方法，oa(origin a),好记
+*7.自动构建构造器（即构造函数）
+   步骤：Source-->Generate Constructor using Fields…
+*8.类的窗口可以随意移动到eclipse的任何地方
+*9.编写程序出现代码复制（复制自己在此程序中的代码，自己复制自己，代码重复），
+   是代码质量不良的表现，不利于代码的维护，不具有可扩展性
+   通过代码复制引出继承
+*10.在main函数中，直接转到所指函数
+   选中函数->右键->Open Declaration
+   选中函数->F3
+*11.自动产生toString()
+   source->Generate toString()
+*12.改写父类有的函数
+    自动生成equals()（object的equals()只是比较了管理者）
+    source->Override/Implement.Methods...
+*13.继承
+    在建立类的时候，在superclass里选择
+    会在打开后直接给你extends

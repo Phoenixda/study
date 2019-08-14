@@ -1,0 +1,39 @@
+*  为小技巧
+
+*1.在main函数中，直接转到所指函数
+   选中函数->右键->Open Declaration
+   选中函数->F3
+2.  .split 函数，把字符串按空格划分
+3.消除代码复制
+  代码复制是不良设计的一种表现
+  消除代码复制的一种方法：将重复的代码提出，制造成函数
+4.封装降低代码的耦合（类与类之间）
+  public 变成 private
+  注意：public Room getNorth()
+        {
+             return northExit;
+        }
+        常见的给private变量找出口的方法
+        另一个类直接用  .getNorth() 函数，就可以访问private变量northExit
+        （我没用过，因为这是我初学Java，惭愧）
+        翁恺的课里说这样用并不好，是一种无可奈何的过度方案。
+        翁恺的课里强调不是把自己的所有用get类似的函数全都都展现给别人，让
+                  别人劳动，而是要自己适当的展现，自己多劳动，根据别人的需求
+                  自己来决定展现（可控）
+        +++++++++++++++++
+        所以，我们把以他类的要用到我的private变量的地方，看清楚
+        我们可以把涉及到的函数写到我们中去，做成一个get函数
+        这样，此get非彼get
+        我们给出的是我们的函数，我们的private变量（大多都是private变量吧）
+        并未被直接用（get直接return变量算直接动变量了）
+        所以我们的封装：只动函数，不动变量
+5.String ret = "";
+  ret+="north";
+  效率低
+  换成：
+  StringBuffer sb = new StringBuffer();
+  sb.append("north"):
+  sb.toString();  （输出）
+  因为每一次ret+="north";  ，都会产生一个新的对象，再把管理者赋过去
+  String对象不可修改，StringBuffer对象可以修改，所以降低开销
+6.可扩展性
